@@ -1,9 +1,14 @@
+
 language: java
 jdk:
   - openjdk8
 
+script:
+  - ./gradlew check
+
+
 deploy:
   provider: heroku
-   api_keys:
-     secure: $HEROKU_TOKEN
-  app: "music-demo-store"
+  api_key:
+    secure: $HEROKU_TOKEN
+  app: "music-store-app"

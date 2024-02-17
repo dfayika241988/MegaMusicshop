@@ -2,3 +2,8 @@ language: java
 jdk:
   - openjdk8
 
+deploy:
+  provider: heroku
+   api_keys:
+     secure: $HEROKU_TOKEN
+  app: "music-demo-store"
